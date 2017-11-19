@@ -8,11 +8,18 @@
 
 import Foundation
 import UIKit
+import FirebaseAuth
 
 class PerfilController: UIViewController {
+    
+    @IBAction func Salir(_ sender: UIButton) {
+        try! Auth.auth().signOut()
+        self.performSegue(withIdentifier: "segue2", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        print(Auth.auth().currentUser?.email as Any)
     }
     
     override func didReceiveMemoryWarning() {

@@ -25,10 +25,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_bg3" translatesAutoresizingMaskIntoConstraints="NO" id="xnw-ga-gyh">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rQN-9V-M8m">
-                                <rect key="frame" x="80" y="323" width="215" height="180"/>
+                                <rect key="frame" x="80" y="367" width="215" height="180"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3G-xP-ANM">
                                         <rect key="frame" x="0.0" y="0.0" width="215" height="30"/>
@@ -63,7 +63,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHh-h3-yCu">
-                                <rect key="frame" x="68.5" y="112" width="237" height="86"/>
+                                <rect key="frame" x="68.5" y="156" width="237" height="86"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="YHh-h3-yCu" secondAttribute="height" multiplier="237:86" id="xKq-Fs-RyM"/>
                                 </constraints>
@@ -218,6 +218,17 @@
                                     <segue destination="Epr-CA-9uw" kind="show" id="OYa-IO-LFg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIu-fE-JtZ">
+                                <rect key="frame" x="227" y="426" width="116" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Cerrar Sesion">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="Salir:" destination="3s9-6S-778" eventType="touchUpInside" id="Qg4-iZ-yVK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -231,6 +242,8 @@
                             <constraint firstItem="jog-3u-UUm" firstAttribute="centerX" secondItem="KVd-Pw-YcZ" secondAttribute="centerX" id="Vfa-mZ-PhH"/>
                             <constraint firstItem="nc8-B7-WKj" firstAttribute="trailing" secondItem="U5J-uq-6NN" secondAttribute="trailing" constant="30" id="ZCc-33-3Wg"/>
                             <constraint firstItem="nc8-B7-WKj" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KVd-Pw-YcZ" secondAttribute="trailing" id="Zpd-aB-jDi"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wIu-fE-JtZ" secondAttribute="trailing" constant="16" id="Zzw-k4-c9L"/>
+                            <constraint firstItem="U5J-uq-6NN" firstAttribute="top" secondItem="wIu-fE-JtZ" secondAttribute="bottom" constant="8" id="ac1-rb-z7g"/>
                             <constraint firstItem="nc8-B7-WKj" firstAttribute="bottom" secondItem="Rb3-qc-Fas" secondAttribute="bottom" constant="35" id="gGF-wG-h5T"/>
                             <constraint firstAttribute="trailing" secondItem="jog-3u-UUm" secondAttribute="trailing" id="hMa-eA-6o0"/>
                             <constraint firstItem="jog-3u-UUm" firstAttribute="leading" secondItem="bqM-vm-lUl" secondAttribute="leading" id="lNc-aT-i0c"/>
@@ -238,14 +251,18 @@
                             <constraint firstItem="nc8-B7-WKj" firstAttribute="trailing" secondItem="Rb3-qc-Fas" secondAttribute="trailing" constant="32" id="nN8-nw-8Y6"/>
                             <constraint firstItem="KVd-Pw-YcZ" firstAttribute="top" secondItem="nc8-B7-WKj" secondAttribute="top" constant="36" id="vO7-OC-iG7"/>
                             <constraint firstItem="Rb3-qc-Fas" firstAttribute="top" secondItem="U5J-uq-6NN" secondAttribute="bottom" constant="24" id="z0k-iM-zzY"/>
+                            <constraint firstItem="wIu-fE-JtZ" firstAttribute="leading" secondItem="jog-3u-UUm" secondAttribute="trailing" constant="-148" id="z1U-ah-rqu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nc8-B7-WKj"/>
                     </view>
                     <tabBarItem key="tabBarItem" selectedImage="rsz_1rsz_user-image-with-black-background_318-34564" systemItem="contacts" id="g3K-3g-6dz"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="segue2" id="0Wu-mj-u44"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RgZ-6b-ZsU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53.600000000000001" y="1700.5997001499252"/>
+            <point key="canvasLocation" x="-503" y="1712"/>
         </scene>
         <!--Actualizar datos-->
         <scene sceneID="uSU-sH-EzQ">
@@ -360,7 +377,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ilq-1I-j5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-696.79999999999995" y="2424.7376311844082"/>
+            <point key="canvasLocation" x="-528" y="2587"/>
         </scene>
         <!--Agrega tu mascota-->
         <scene sceneID="pdN-X7-Vj4">
@@ -521,7 +538,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qzi-ZQ-Cbj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="94" y="2472"/>
+            <point key="canvasLocation" x="-87" y="2587"/>
         </scene>
         <!--Agregar vacuna-->
         <scene sceneID="hDB-vH-FD6">
@@ -551,7 +568,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XJ4-HK-YjU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="970.39999999999998" y="2477.8110944527739"/>
+            <point key="canvasLocation" x="705" y="2563"/>
         </scene>
         <!--Agregar vet-->
         <scene sceneID="ATo-Oa-gaX">
@@ -638,7 +655,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="67p-uf-57b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1940" y="2457.1214392803599"/>
+            <point key="canvasLocation" x="1412" y="2563"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="kHH-lX-fwx">
