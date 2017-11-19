@@ -26,6 +26,8 @@ class ViewController: UIViewController {
                 Auth.auth().signIn(withEmail: email.text!, password: password.text!, completion: {(user,error) in
                     if user != nil{
                         print("Logueado exitosamente")
+                        //Si el Login es exitoso continua al menu
+                        self.performSegue(withIdentifier: "segue", sender: self)
                         
                     }else{
                         if let MiniError = error?.localizedDescription{
@@ -40,6 +42,8 @@ class ViewController: UIViewController {
                 Auth.auth().createUser(withEmail: email.text!, password: password.text!, completion: { (user, error) in
                     if user != nil{
                         print("Registro exitoso!")
+                        //Si el registro es exitoso continua al menu
+                        self.performSegue(withIdentifier: "segue", sender: self)
                         
                     }else{
                         if let MiniError = error?.localizedDescription{

@@ -94,6 +94,7 @@
                                 <state key="normal" title="Siguiente"/>
                                 <connections>
                                     <action selector="Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kuP-PD-us1"/>
+                                    <segue destination="BA7-0J-Avj" kind="show" identifier="segue" id="X3z-pA-SH1"/>
                                 </connections>
                             </button>
                         </subviews>
