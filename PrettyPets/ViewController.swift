@@ -25,21 +25,29 @@ class ViewController: UIViewController {
             if segmentControl.selectedSegmentIndex == 0 {
                 Auth.auth().signIn(withEmail: email.text!, password: password.text!, completion: {(user,error) in
                     if user != nil{
-                        print("SUCCESSFUL")
+                        print("Logueado exitosamente")
                         
                     }else{
-                     print("ERROR1")
-                        
+                        if let MiniError = error?.localizedDescription{
+                            print("Ha ocurrido un error en el LOGUEO: ")
+                            print(MiniError)
+                        }else{
+                            print("Parece un error más grave chiquillo")
+                        }
                     }
                 })
             }else{
                 Auth.auth().createUser(withEmail: email.text!, password: password.text!, completion: { (user, error) in
                     if user != nil{
-                        print("SUCCESSFUL")
+                        print("Registro exitoso!")
                         
                     }else{
-                        print("ERROR2")
-                        
+                        if let MiniError = error?.localizedDescription{
+                            print("Ha ocurrido un error en el REGISTRO: ")
+                            print(MiniError)
+                        }else{
+                            print("Parece un error más grave chiquillo")
+                        }
                     }
                 })
             }
